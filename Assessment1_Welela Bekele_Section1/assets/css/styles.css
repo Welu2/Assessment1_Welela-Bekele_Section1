@@ -1,29 +1,31 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background: #f0f0f0;;
-    
+    background: #f0f0f0;
     font-family: 'Courier New', Courier, monospace;
-
 }
-h2{
+
+h2 {
     font-size: 1.3rem;
     margin: 10px;
     padding: 0 100px 10px;
 }
-.product h2{
-    font-size: 1.2 rem;
+
+.product h2 {
+    font-size: 1.2rem;
     padding: 5px;
-} 
+}
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 100px;
+    gap: 100px; 
     justify-items: center;
     align-items: stretch;
     padding: 0 160px 60px;
     margin: 0;
 }
+
 
 .product {
     display: flex;
@@ -37,7 +39,7 @@ h2{
     border-radius: 10px;
 }
 
-.product img{
+.product img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -46,48 +48,103 @@ h2{
     border-radius: 10px;
     padding-bottom: 5px;
     margin: 0;
-    
 }
+
 .product .price {
     font-size: 1.5rem;
     text-align: center;
     color: #4CAF50;
     font-weight: bold;
 }
-.product p{
-    text-align: center;  
 
+.product p {
+    text-align: center;
 }
 
-header{
+
+header {
     background: #d9eed9;
-    padding:20px;
+    padding: 20px;
     width: 100%;
     font-size: 0.8em;
     text-align: center;
 }
-nav ul{
+
+nav ul {
     list-style: disc;
     text-align: center;
-
 }
-nav li{
+
+nav li {
     display: inline-block;
 }
-nav a{
+
+nav a {
     display: block;
-    color:#4CAF50 ;
+    color: #4CAF50;
     padding: 5px 20px;
     text-align: center;
     text-decoration: none;
 }
-footer{
-    background-color:#124314;
+
+
+footer {
+    background-color: #124314;
     color: white;
     text-align: center;
     padding: 20px;
-    
     width: 100%;
     bottom: 0;
 }
 
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.1rem; 
+        padding: 0 20px;   
+    }
+
+    .product h2 {
+        font-size: 1.1rem;  
+        padding: 10px;     
+    }
+
+    .product-list {
+        padding: 0 20px 20px;  
+        gap: 30px;             
+    }
+
+    .product {
+        padding: 15px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1rem;
+        padding: 0 10px; 
+    }
+
+    .product h2 {
+        font-size: 1rem; 
+        padding: 5px;    
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;  
+        gap: 20px;                 
+        padding: 0 10px 20px;       
+    }
+
+    .product {
+        padding: 10px;  
+    }
+
+    nav a {
+        padding: 5px 10px; 
+    }
+
+    footer {
+        padding: 15px; 
+}
+}
